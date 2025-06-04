@@ -10,11 +10,13 @@
     */
 
     //ENTRADA
-let 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    const littleAntes = Number(prompt(`Informe a nota do little brother antes de receber ajuda.`));
+    const littleDepois = Number(prompt(`Informe a nota do little brother depois de receber ajuda.`));
 
+    //PROCESSAMENTO
+    const acrescimo = (littleDepois - littleAntes) * 25 / 100
+
+    //SAÍDA
+    document.write (`O big brother receberá de ${acrescimo}% em sua nota, pela ajuda.`);
+    
 </script>

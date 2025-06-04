@@ -5,19 +5,29 @@
     */
 
     //ENTRADA
-    let um = Number(prompt(`Informe um número;`));
-    let dois = Number(prompt(`Informe um segundo número;`));
-    let tres = Number(prompt(`Informe um terceiro número;`));
+    const um = Number(prompt(`Informe um número;`));
+    const dois = Number(prompt(`Informe um segundo número;`));
+    const tres = Number(prompt(`Informe um terceiro número;`));
 
     //PROCESSAMENTO
-    if (um > dois > tres)
+    if (um >= dois && dois >= tres)
         alert(`${um}, ${dois} e ${tres}`)
 
-    if (dois > tres > um)
+    else if (um >= tres && tres >= dois)
+        alert(`${um}, ${tres} e ${dois}`)
+
+    else if (dois >= um && um >= tres)
+        alert(`${dois}, ${um} e ${tres}`)
+
+    else if (dois >= tres && tres >= um)
         alert(`${dois}, ${tres} e ${um}`)
 
-            (tres > dois > um)
-    alert(`${tres}, ${dois} e ${um}`)
+    else if (tres >= um && um >= dois)
+        alert(`${tres}, ${um} e ${dois}`)
+
+    else
+        alert(`${tres}, ${dois} e ${um}`)
+
     //SAÍDA
 
 </script>
