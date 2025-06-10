@@ -12,52 +12,42 @@
 
     //ENTRADA
 
-    const numero = Number(prompt(`Informe um número inteiro menor que 1000.`));
-
-
+    const numero = Number(prompt(`Informe um número inteiro menor que 1000: `));
 
     //PROCESSAMENTO
-
-
-
-    let centenas = Math.floor(numero / 100);
-    let dezenas = Math.floor((numero % 100) / 10);
-    let unidades = unidades = Math.floor(numero % 10);
-
-
+    const centenas = Math.floor(numero / 100);
+    const dezenas = Math.floor((numero % 100) / 10);
+    const unidades = numero % 10;
+    
     //SAÍDA
-
-    if (centenas >= 1) {
-        mensagemFinal += `${centenas} centena`;
-
-    if (centenas > 1) { mensagemFinal += "s"; };
-    }
-    if (dezenas > 0 && unidades > 0) {
-        mensagemFinal = mensagemFinal + `,`;
-    }
-    else if (dezenas >|| unidades > 0) {
-        mensagemFinal = mensagemFinal + `e`;
-    }
-    else
-        mensagemFinal = mensagemFinal
-
-
-
-        
-    else if (dezenas >= 1) {
-        mensagemFinal += `${dezenas} dezena`;
-
-        if (dezenas > 1) { mensagemFinal += "s"; }
-    }
-
-    {
-
-    else if (unidades >= 1) {
-            mensagemFinal += `${unidades}unidades`;
+    let mensagemFinal = ``;
+    if (centenas > 0) {
+        mensagemFinal = mensagemFinal + `${centenas} centena`;
+        if (centenas > 1) {
+            mensagemFinal = mensagemFinal + `s`;
         }
-
+        if (dezenas > 0 && unidades > 0) {
+            mensagemFinal = mensagemFinal + `, `;
+        }
+        else if (dezenas > 0 || unidades > 0) {
+            mensagemFinal = mensagemFinal + ` e `;
+        }
+    }
+    if (dezenas > 0) {
+        mensagemFinal = mensagemFinal + `${dezenas} dezena`;
+        if (dezenas > 1) {
+            mensagemFinal = mensagemFinal + `s`;
+        }
+        if (unidades > 0) {
+            mensagemFinal = mensagemFinal + ` e `;
+        }
+    }
+    if (unidades > 0) {
+        mensagemFinal = mensagemFinal + `${unidades} unidade`;
+        if (unidades > 1) {
+            mensagemFinal = mensagemFinal + `s`;
+        }
     }
 
-    else
-    mensagemFinal += `
-</script>
+    alert(mensagemFinal);
+    </script>
