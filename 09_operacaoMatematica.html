@@ -9,63 +9,57 @@
     */
 
     //ENTRADA
-const numUm = Number(prompt(`Informe o primeiro número:`));
-const numDois = Number(prompt(`Informe o segundo número:`));
-const operacao = prompt(`Informe a operação que deseja realizar(+, -, *, /):`);
-const operacaoFinal = operacao.trim();
+    const numUm = Number(prompt(`Informe o primeiro número:`));
+    const numDois = Number(prompt(`Informe o segundo número:`));
+    const operacao = prompt(`Informe a operação que deseja realizar(+, -, *, /):`).trim();
 
     //PROCESSAMENTO
-const resultado1 = numUm + numDois;
-const resultado2 = numUm - numDois;
-const resultado3 = numUm * numDois;
-const resultado4 = numUm / numDois;
+    const resultado1 = numUm + numDois;
+    const resultado2 = numUm - numDois;
+    const resultado3 = numUm * numDois;
+    const resultado4 = numUm / numDois;
 
-if (operacao === '+') &  {
-    alert(`Resultado: ${resultado1}`);
-
-    let numero_final = resultado1 % 2;
-
-    if (numero_final == 0)
-        alert(`Resultado: ${resultado1}. O número é par`);
-    else
-        alert(`O número é ímpar`);
-
-
-} else if (operacao === '-') {
-    alert(`Resultado: ${resultado2}`);
-
-    let numero_final = resultado2 % 2;
-
-    if (numero_final == 0)
-        alert(`O número é par`);
-    else
-        alert(`O número é ímpar`);
-
-} else if (operacao === '*') {
-    alert(`Resultado: ${resultado3}`);
-
-    let numero_final = resultado3 % 2;
-
-    if (numero_final == 0)
-        alert(`O número é par`);
-    else
-        alert(`O número é ímpar`);
-
-} else if (operacao === '/') {
-    alert(`Resultado: ${resultado4}`);
-
-    let numero_final = resultado4 % 2;
-
-    if (numero_final == 0)
-        alert(`O número é par`);
-    else
-        alert(`O número é ímpar`);
-} else {
-    alert('Operação inválida!');
-}
-
-
-    
+            
     //SAÍDA
 
+        //adição
+
+    if (operacao == `+`) 
+        if (resultado1 % 2 == 0);{
+        document.write(`Resultado: ${resultado1}. O número é par`);}
+        else {
+        document.write(`Resultado: ${resultado1} número é ímpar`);}
+
+
+        //subtração
+
+    else if (operacao == `-`) 
+    
+      if (resultado2 % 2 == 0) 
+        document.write(`Resultado: ${resultado2}, número é par`);
+    
+      else
+        document.write(`Resultado: ${resultado2}, número é ímpar`);
+ 
+
+
+        //multiplicação
+    else if (operacao == `*`) 
+    
+      if (resultado2 % 2 == 0) 
+        document.write(`Resultado: ${resultado3}, número é par`);    
+      else 
+        document.write(`Resultado: ${resultado3}, número é ímpar`);
+
+
+        //divisão
+     else if (operacao == `/`) 
+    
+      if (resultado2 % 2 = 0) 
+        document.write(`Resultado: ${resultado4}, número é par`);
+      else
+        document.write(`Resultado: ${resultado4}, número é ímpar`);
+
+     else
+     document.write(`Operação inválida.`)
 </script>
