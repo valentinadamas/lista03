@@ -22,9 +22,24 @@ const p4 = prompt(`Devia para a vítima? (sim/não)`).toLowerCase();
 const p5 = prompt(`Já trabalhou com a vítima? (sim/não)`).toLowerCase();
 
     //PROCESSAMENTO
-if (p1 === 'sim') {
-     resposta1 = 1;
-    
+let usuario = ``
+if (p1 === `sim`) && (p2 === `sim`) || 
+   (p1 === `sim`) && (p3 === `sim`) || 
+   (p1 === `sim`) && (p4 === `sim`) || 
+   (p1 === `sim`) && (p5 === `sim`)
+     usuario = suspeito;
+
+if else {(p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`)|| 
+        (p1 === `sim`) && (p2 === `sim`) && (p4 === `sim`) || 
+        (p1 === `sim`) && (p2 === `sim`) && (p5 === `sim`) || 
+        (p1 === `sim`) && (p3 === `sim`) && (p4 === `sim`) || 
+        (p1 === `sim`) && (p3 === `sim`) && (p5 === `sim`) ||
+        (p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`) && (p4 === `sim`) ||
+        (p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`) && (p5 === `sim`) ||
+        (p2 === `sim`) && (p3 === `sim`) && (p4 === `sim`) && (p5 === `sim`) ||
+        (p1 === `sim`) && (p3 === `sim`) && (p4 === `sim`) && (p5 === `sim`) }
+       
+        
     //SAÍDA
 
 </script>
