@@ -16,26 +16,37 @@
     */
 
     //ENTRADA
-    const litrosVendidos = Number(prompt(`Informe a quantidade de L vendidos:`))
-    const tipocombustivel = prompt(`Informe o tipo de combustível>(A-Álcool ou G-Gasolina)`).toUpperCase()
-
+    //ENTRADA
+    const litrosVendidos = Number(prompt(`Informe a quantidade de litros vendidos:`));
+    const tipoCombustivel = prompt(`Qual o tipo de combustível? (A-Álcool | G-Gasolina)`).toUpperCase();
 
     //PROCESSAMENTO
     let precoFinal = 0;
     if (tipoCombustivel == `A`) {
-        precoFinal = (litrosVendidos * 6.1) * 0.97;
+        if (litrosVendidos <= 20) {
+            precoFinal = (litrosVendidos * 6.1) * 0.97;
+        }
+        else {
+            precoFinal = (litrosVendidos * 6.1) * 0.95;
+        }
     }
-    else{
-        precoFinal = (litrosVendidos* 6.1) * 0.95
-    }
-    else if (tipoCombustivel == `G`)
-        if (litrosVendidos <=20) {
+    else if (tipoCombustivel == `G`) {
+        if (litrosVendidos <= 20) {
+            precoFinal = (litrosVendidos * 6.5) * 0.96;
+        }
+        else {
             precoFinal = (litrosVendidos * 6.5) * 0.94;
         }
+    }
+    else {
+        alert(`Tipo de Combustível Inválido!`);
+    }
     
     //SAÍDA
-    if (tipocombustivel != `G` && tipocombustivel != `A`){
+    if (tipoCombustivel != `G` && tipoCombustivel != `A`) {
+        document.write(`Tipo de Combustível Inválido!`);
     }
-    document.write(`)
-    document.write(`O preço final a ser pago será R$ ${precoFinal.toFixed(2)}`);
+    else {
+        document.write(`O preço final a ser pago será R$ ${precoFinal.toFixed(2)}`);
+    }
 </script>

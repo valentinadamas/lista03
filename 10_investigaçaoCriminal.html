@@ -15,31 +15,47 @@
     */
 
     //ENTRADA
-const p1 = prompt(`Telefonou para a vítima? (sim/não)`).toLowerCase();	
-const p2 = prompt(`Esteve no local do crime? (sim/não)`).toLowerCase();
-const p3 = prompt(`Mora perto da vítima? (sim/não)`).toLowerCase();
-const p4 = prompt(`Devia para a vítima? (sim/não)`).toLowerCase();
-const p5 = prompt(`Já trabalhou com a vítima? (sim/não)`).toLowerCase();
+    const p1 = prompt(`Telefonou para a vítima? (sim/não)`).toLowerCase().trim();
+    const p2 = prompt(`Esteve no local do crime? (sim/não)`).toLowerCase().trim();
+    const p3 = prompt(`Mora perto da vítima? (sim/não)`).toLowerCase().trim();
+    const p4 = prompt(`Devia para a vítima? (sim/não)`).toLowerCase().trim();
+    const p5 = prompt(`Já trabalhou com a vítima? (sim/não)`).toLowerCase().trim();
 
     //PROCESSAMENTO
-let usuario = ``
-if (p1 === `sim`) && (p2 === `sim`) || 
-   (p1 === `sim`) && (p3 === `sim`) || 
-   (p1 === `sim`) && (p4 === `sim`) || 
-   (p1 === `sim`) && (p5 === `sim`)
-     usuario = suspeito;
 
-if else {(p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`)|| 
-        (p1 === `sim`) && (p2 === `sim`) && (p4 === `sim`) || 
-        (p1 === `sim`) && (p2 === `sim`) && (p5 === `sim`) || 
-        (p1 === `sim`) && (p3 === `sim`) && (p4 === `sim`) || 
-        (p1 === `sim`) && (p3 === `sim`) && (p5 === `sim`) ||
-        (p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`) && (p4 === `sim`) ||
-        (p1 === `sim`) && (p2 === `sim`) && (p3 === `sim`) && (p5 === `sim`) ||
-        (p2 === `sim`) && (p3 === `sim`) && (p4 === `sim`) && (p5 === `sim`) ||
-        (p1 === `sim`) && (p3 === `sim`) && (p4 === `sim`) && (p5 === `sim`) }
-       
-        
+    let probabilidade = 0
+
+    if (p1 == "SIM") {
+        probabilidade++
+    }
+    if (p2 == "SIM") {
+        probabilidade++
+    }
+    if (p3 == "SIM") {
+        probabilidade++
+    }
+    if (p4 == "SIM") {
+        probabilidade++
+    }
+    if (p5 == "SIM") {
+        probabilidade++
+    }
+
+    if (probabilidade == 3 || probabilidade == 4) {
+        alert(`Você é classificado como cumplice.`)
+    }
+    else if (probabilidade == 1 || probabilidade == 2) {
+        alert(`Você é classificado como suspeito.`)
+    }
+    else if (probabilidade == 5) {
+        alert(`Você é classificado como assassino.`)
+    }
+    else {
+        alert(`Você é classificado como inocente.`)
+
+
+    }
+
     //SAÍDA
 
 </script>
