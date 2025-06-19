@@ -8,8 +8,32 @@
     //ENTRADA
 const numero = Number(prompt(`Informe um número:`)).trim();
 
+    //PROCESSAMENTO<script>
+    /*
+    PROBLEMA: NÚMERO INTEIRO OU DECIMAL
+    Faça um script que peça um número e informe se o número é inteiro ou decimal.
+    Dica: utilize uma função de arredondamento.
+    */
+
+    //ENTRADA
+
+    let numeroo = Number(prompt(`Informe um número:`).replace(`,`, `.`));
+
     //PROCESSAMENTO
 
+    let resultado = " ";
+
     //SAÍDA
+ 
+ if (isNaN(numeroo)) {
+        resultado = "Valor inválido! Não é um número.";
+    } else {
+        if (Number.isInteger(numeroo)) {
+            resultado = `O número ${numeroo} é inteiro.`;
+        } else {
+            resultado = `O número ${numeroo} é decimal.`;
+        }
+    }
+    alert(resultado);
 
 </script>

@@ -12,11 +12,35 @@
     */
 
     //ENTRADA
-const valorSaque = Number(prompt(`Informe o valor do saque:`));
-const notas = Number(prompt(`Informe quantas notas de cada valor serão fornecidas:`));
-    
+    const ladoA = Number(prompt(`Informe o comprimento do lado A do triângulo:`));
+    const ladoB = Number(prompt(`Informe o comprimento do lado B do triângulo:`));
+    const ladoC = Number(prompt(`Informe o comprimento do lado C do triângulo:`));
+    let mensagem = ` `;
+
     //PROCESSAMENTO
 
+    if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+        mensagem = `Valores inválidos! Todos os lados devem ser números.`;
+
+    } else if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+        mensagem = `Valores inválidos! Os lados devem ser maiores que zero.`;
+
+    } else if (ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+        // triângulo
+        if (ladoA === ladoB && ladoB === ladoC) {
+            mensagem = `Os lados formam um triângulo equilátero.`;
+
+        } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+            mensagem = `Os lados formam um triângulo isósceles.`;
+
+        } else {
+            mensagem = `Os lados formam um triângulo escaleno.`;
+        }
+
+    } else {
+        mensagem = `Os valores informados não podem formar um triângulo.`;
+    }
+    alert(mensagem);
     
     //SAÍDA
 
